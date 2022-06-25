@@ -1,14 +1,16 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import { StorageConfigAsyncOptions } from './interfaces';
 import { createGoogleCloudStorageClient, createS3StorageClient, createStorageAsyncOptions } from './providers';
-import { GoogleCloudStorageService } from './services';
+import { GoogleCloudStorageService, S3StorageService } from './services';
 
 @Module( {
     providers: [
-        GoogleCloudStorageService
+        GoogleCloudStorageService,
+        S3StorageService
     ],
     exports: [
-        GoogleCloudStorageService
+        GoogleCloudStorageService,
+        S3StorageService
     ],
 } )
 export class StorageModule {

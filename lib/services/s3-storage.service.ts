@@ -1,7 +1,7 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { S3 } from "aws-sdk";
 import { CreateBucketRequest, DeleteBucketRequest, PutObjectRequest } from "aws-sdk/clients/s3";
-import { S3_STORAGE_CLIENT } from "lib/constants";
+import { S3_STORAGE_CLIENT } from "../constants";
 
 @Injectable()
 export class S3StorageService {

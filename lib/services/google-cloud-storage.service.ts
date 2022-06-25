@@ -49,7 +49,7 @@ export class GoogleCloudStorageService {
 
     async getBucketFile( name: string, options?: { bucketOptions?: BucketOptions, filesOptions?: GetFileOptions } ) {
 
-        return await this.bucket( name, options.bucketOptions ).getFiles( options.filesOptions )
+        return await this.bucket( name, options?.bucketOptions ).getFiles( options?.filesOptions )
 
     }
 
@@ -60,10 +60,10 @@ export class GoogleCloudStorageService {
     ) {
         return await this.bucket(
             bucketName,
-            options.bucketOptions
+            options?.bucketOptions
         )
-        .file( fileName, options.fileOptions )
-        .download()[ 0 ]
+        .file( fileName, options?.fileOptions )
+        .download()
 
     }
 
@@ -76,9 +76,9 @@ export class GoogleCloudStorageService {
 
         this.bucket(
             bucketName,
-            options.bucketOptions
+            options?.bucketOptions
         )
-        .file( fileName, options.fileOptions )
+        .file( fileName, options?.fileOptions )
         .createWriteStream()
         .on( "finish", () => {
             return;
@@ -93,9 +93,9 @@ export class GoogleCloudStorageService {
     ) {
         return await this.bucket(
             bucketName,
-            options.bucketOptions
+            options?.bucketOptions
         )
-        .file( fileName, options.fileOptions )
+        .file( fileName, options?.fileOptions )
         .delete()
     }
 

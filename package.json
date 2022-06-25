@@ -5,6 +5,12 @@
     "author": "Sameer Khandke",
     "private": false,
     "license": "MIT",
+    "repository": {
+        "url": "https://github.com/coolsamk7/nestjs-storage.git"
+    },
+    "bugs": {
+        "url": "https://github.com/coolsamk7/nestjs-storage/issues"
+    },
     "scripts": {
         "prebuild": "rimraf dist",
         "build": "nest build",

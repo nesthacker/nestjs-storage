@@ -1,6 +1,6 @@
 {
   "name": "@nesthacker/nestjs-storage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "provides an injectable storage (S3, GS) client to provide storage access from NestJs modules",
   "author": "Sameer Khandke",
   "private": false,

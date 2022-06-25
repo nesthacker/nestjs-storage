@@ -4,6 +4,7 @@
     "description": "provides an injectable storage (S3, GS) client to provide storage access from NestJs modules",
     "author": "Sameer Khandke",
     "private": false,
+    "license": "MIT",
     "scripts": {
         "prebuild": "rimraf dist",
         "build": "nest build",
